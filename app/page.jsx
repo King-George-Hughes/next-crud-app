@@ -5,9 +5,6 @@ export default function Home() {
   return (
     <div>
       <PostsList />
-      <PostsList />
-      <PostsList />
-      <PostsList />
     </div>
   );
 }

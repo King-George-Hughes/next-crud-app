@@ -17,3 +17,13 @@ export async function GET() {
   const posts = await Post.find();
   return NextResponse.json({ posts });
 }
+
+export async function DELETE(request) {
+  const id = request.nextUrl.searchParams.get("id");
+  await connectMongoDB();
+  await Post.findByIdAndDelete(id);
+  return NextResponse.json(
+    { message: "Post Deleted Successfully" },
+    { status: 200 }
+  );
+}
