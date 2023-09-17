@@ -19,10 +19,11 @@ const getPostById = async (id) => {
 const page = async ({ params }) => {
   const { id } = params;
   const posts = await getPostById(id);
+  const { title, description } = posts.post;
 
   return (
     <div>
-      <EditPostForm posts={posts} />
+      <EditPostForm id={id} title={title} description={description} />
     </div>
   );
 };

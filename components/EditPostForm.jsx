@@ -26,6 +26,7 @@ const EditPostForm = ({ id, title, description }) => {
       }
 
       router.push("/");
+      router.refresh();
       // return res.json();
     } catch (error) {
       console.log(error);
