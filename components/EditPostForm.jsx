@@ -25,9 +25,8 @@ const EditPostForm = ({ id, title, description }) => {
         throw new Error("Failed to fatch post");
       }
 
-      router.push("/");
       router.refresh();
-      // return res.json();
+      router.push("/");
     } catch (error) {
       console.log(error);
     }
